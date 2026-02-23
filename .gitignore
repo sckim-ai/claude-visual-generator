@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+*.png
+*.jpg
+*.jpeg
+figures/
+slide_image_gen/
