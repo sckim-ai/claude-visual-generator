@@ -42,7 +42,7 @@ Flow, Structure, Network, Contrast, Evolution, Central, Cycle, Group, Concentric
 ### 설치 방법
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/claude-visual-generator.git
+git clone https://github.com/sckim-ai/claude-visual-generator.git
 cd claude-visual-generator
 bash install.sh
 ```
