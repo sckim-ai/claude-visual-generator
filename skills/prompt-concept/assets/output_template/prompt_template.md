@@ -21,25 +21,47 @@ Domain Keywords Reference (for AI understanding only - DO NOT render in image):
 
 Visual Accuracy Reference (AI rendering guidance - DO NOT render as text):
 [Photography 또는 실물 장비/시스템이 포함된 경우 필수 작성, 3D/아이콘 전용이면 생략 가능]
+[⚠️ 아래 각 섹션의 최소 분량 기준을 반드시 준수할 것]
 
 Application Context:
-[대상 시스템/장비가 속한 구체적 어플리케이션 - 제품군, 산업 규모, 클래스 등]
+- [대상 시스템/장비가 속한 구체적 어플리케이션 - 제품군, 산업 규모, 클래스 등]
+- [엔진/시스템의 전체 치수 및 형태 (예: approximately 1.3m fan diameter, 3m total length)]
+- [하위 구성품의 통합 방식 설명 (예: The gearbox system is NOT a standalone assembly — it is integrated into the engine structure. The IGB sits deep inside the engine core, the tower shaft runs through a structural strut, and the AGB mounts underneath at 6 o'clock position.)]
+(최소 3개 항목. 단순 제품명만 기재 금지 — 물리적 맥락을 서술형으로 기술)
 
 Physical Objects:
-- [대상1]: [기하학적 형태, 재질/표면 질감, 대략적 크기, 색상, 핵심 시각적 특징]
-- [대상2]: [동일 형식]
-- [대상3]: [동일 형식]
-(각 대상의 실물 외형을 영어로 상세 기술. 웹 검색으로 참조 정보를 확인할 것)
+[⚠️ Domain Keywords에 등록된 물리적 대상은 빠짐없이 전수 기술할 것]
+[⚠️ 각 대상 최소 3줄(~50 words) 이상, 주요 대상은 5줄(~80 words) 이상]
+
+- [대상1 이름]: [기하학적 형태 (crescent-shaped, cylindrical, compact box 등)]. [재질/표면 질감 (light aluminum alloy casting, polished steel, dark gray/gunmetal 등)]. [대략적 크기 (mm 단위 — roughly 400mm wide × 250mm tall × 200mm deep)]. [마운팅 위치/방식 (mounted at the 6 o'clock position, bolted to AGB drive pad 등)]. [핵심 시각적 특징 — 전문가가 식별하는 고유 특징 (machined circular drive pads on both forward and aft faces, ribbed/finned cooling jacket, air inlet duct with turbine scroll/volute 등)].
+- [대상2 이름]: [동일한 상세 수준으로 기술. 최소 3줄.]
+- [대상3 이름]: [동일한 상세 수준으로 기술.]
+- [대상N]: [Domain Keywords의 모든 물리적 대상에 대해 반복]
+(총 Physical Objects 섹션: 최소 400 words. 웹 검색으로 실물 참조 정보를 반드시 확인할 것)
 
 Scale Relationships:
-- [대상 간 상대적 크기 비율 - "A는 B의 약 2배 크기" 형태]
+- [대상 간 상대적 크기 비율 — "A is roughly 3-4x larger than B" 형태]
+- [전체 시스템 대비 구성품 비율 — "The entire assembly is roughly 15-20% of the engine diameter"]
+- [크기순 서열 — "Generator and Starter are the two largest accessories"]
+- [최소/최대 구성품 식별 — "Hydraulic pump and lube pump are the smallest external units"]
+(최소 4개 항목. 모든 주요 대상의 상대적 크기 위계를 명시)
 
 Physical Connections:
-- [대상 간 결합 방식 (볼트, 플랜지, 스플라인, 용접 등)과 방향]
+- [대상A → 대상B: 결합 방식 (splined coupling, bevel gear mesh 등) + 방향 전환 (redirects rotation 90° from axial to radial)]
+- [대상B → 대상C: 경로 설명 (traverses the bypass duct inside a thin airfoil-shaped strut)]
+- [대상C → 대상D: 결합 방식 + 내부 구조 (bevel gear coupling at outer end of strut)]
+- [대상D 내부: 동력 분배 방식 (a train of spur gears distributes rotation to multiple output pads)]
+- [대상D → 하위장치들: 개별 장착 방식 (each accessory bolts to a dedicated machined drive pad via splined quill shaft)]
+(최소 4개 항목. 동력/신호/유체 전달 경로를 빠짐없이 기술)
 
 Critical Accuracy Rules:
-- [전문가가 보았을 때 절대 틀리면 안 되는 물리적 제약 - "X는 반드시 Y와 수직이어야 한다" 형태]
-- [물리적으로 불가능한 구성을 방지하기 위한 규칙]
+- [형상 제약 — "The AGB MUST be crescent/curved shaped, NOT a rectangular box"]
+- [통합/은폐 제약 — "The tower shaft is ENCLOSED inside the strut — no exposed rotating shaft visible"]
+- [장착 제약 — "Accessories mount on BOTH forward and aft faces of the AGB"]
+- [식별 특징 — "The pneumatic starter MUST show a visible air inlet duct"]
+- [스케일 제약 — "All components must reflect the scale of a 10,000 lb thrust class engine"]
+- [기어 타입 — "Bevel gears have curved spiral teeth on conical faces; spur gears have straight teeth on cylindrical faces"]
+(최소 5개 항목. 각 항목은 MUST/NOT 형태의 명확한 제약으로 기술)
 
 Style:
 [3D / 아이콘 / 사진 중 선택]

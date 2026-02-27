@@ -115,15 +115,20 @@ visual-prompt-gov 또는 visual-prompt-concept로 생성된 프롬프트 파일(
 ### 실행 명령어
 
 ```bash
-# 프로젝트 루트 기준 상대 경로
+# 기본 실행 (Nano Banana 2)
 python plugins/visual-generator/scripts/generate_slide_images.py \
   --prompts-dir [prompts_folder]/ \
   --output-dir [output_folder]/
 
-# submodule로 사용하는 경우 (예: honeypot을 submodule로 추가한 경우)
-python honeypot/plugins/visual-generator/scripts/generate_slide_images.py \
+# Nano Banana Pro로 고품질 생성
+python plugins/visual-generator/scripts/generate_slide_images.py \
   --prompts-dir [prompts_folder]/ \
-  --output-dir [output_folder]/
+  --output-dir [output_folder]/ \
+  --model nbpro
+
+# 약식
+python plugins/visual-generator/scripts/generate_slide_images.py \
+  -p [prompts_folder]/ -o [output_folder]/ -m nbpro
 ```
 
 **주의**: 스크립트는 이 플러그인의 `scripts/` 폴더에 위치합니다. 프로젝트 구조에 맞게 경로를 조정하세요.
@@ -132,10 +137,19 @@ python honeypot/plugins/visual-generator/scripts/generate_slide_images.py \
 
 | 항목 | 값 | 설명 |
 |------|---|------|
-| 모델 | gemini-3.1-flash-image-preview | Nano Banana 2 - 고급 텍스트 렌더링 + 고속 생성 |
 | 해상도 | 4K | 최고 해상도 (3840x2160) |
 | 비율 | 16:9 | PPT 슬라이드 표준 |
 | 사고모드 | 활성화 | 복잡한 레이아웃 처리 |
+
+### 모델 선택 (`--model` / `-m`)
+
+| 별칭 | 모델 ID | 코드명 | 특징 |
+|------|---------|--------|------|
+| `nbpro` (기본값) | gemini-3-pro-image-preview | Nano Banana Pro | 최고 품질, 복잡한 추론, 정밀 텍스트 |
+| `nb2` | gemini-3.1-flash-image-preview | Nano Banana 2 | 고속 생성 + 고급 텍스트 렌더링 |
+
+- **nbpro**: Pro 기반, 복잡한 레이아웃이나 정밀한 텍스트에 적합 (기본값)
+- **nb2**: Flash 기반, 빠른 반복 작업이 필요할 때 사용
 
 ### 필수 패키지 설치
 
