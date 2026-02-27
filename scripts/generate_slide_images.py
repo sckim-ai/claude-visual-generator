@@ -97,6 +97,10 @@ def generate_image(
                     image_config=types.ImageConfig(
                         aspect_ratio="16:9", image_size="4K"
                     ),
+                    thinking_config=types.ThinkingConfig(
+                        thinking_level="HIGH",
+                        include_thoughts=True,
+                    ),
                 ),
             )
 
