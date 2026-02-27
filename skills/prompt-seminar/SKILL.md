@@ -130,6 +130,34 @@ skills: layout-types
 | 섹션별 플로우 | Section-Flow 메타포 **(신규)** |
 | 카드 그리드 | Card-Grid 메타포 **(신규)** |
 
+### Phase 3.5: 실물 정확성 조사 (Visual Accuracy Research)
+
+사진(Photography) 스타일 또는 실물 장비/시스템이 포함된 경우 **필수** 수행합니다.
+3D/아이콘 하이브리드에서도 물리적 대상이 포함되면 수행을 권장합니다.
+
+```
++-- Step 3.5-1. 어플리케이션 컨텍스트 조사
+|   +-- 대상 시스템/장비가 속한 구체적 어플리케이션 식별
+|   +-- 제품군, 산업 규모, 클래스 등 명시
+|   +-- 유사 레퍼런스 제품/모델 식별
+|
++-- Step 3.5-2. 물리적 대상체 상세 기술
+|   +-- 각 대상의 기하학적 형태 (원통형, 초승달형, 직육면체 등)
+|   +-- 재질/표면 질감, 대략적 크기, 색상/마감
+|   +-- 핵심 시각적 특징 (스플라인 홈, 볼트 플랜지, 냉각핀 등)
+|   +-- ⚠️ 웹 검색으로 실물 참조 정보를 확인할 것
+|
++-- Step 3.5-3. 스케일 관계 정의
+|   +-- 대상 간 상대적 크기 비율
+|
++-- Step 3.5-4. 물리적 결합 방식 기술
+|   +-- 대상 간 결합 방식과 방향
+|
++-- Step 3.5-5. 물리적 정확성 규칙 정의
+    +-- 전문가가 보았을 때 절대 틀리면 안 되는 물리적 제약
+    +-- 물리적으로 불가능한 구성 방지 규칙
+```
+
 #### 신규 레이아웃 활용 가이드 (9종)
 
 **Gov 전용 레이아웃 (4종)**:
@@ -752,6 +780,10 @@ Style:
 - Sharp focus, natural lighting, realistic proportions
 - Text labels overlaid on semi-transparent panels for readability
 - Can combine with icon overlays for hybrid photo+infographic approach
+
+⚠️ 사진 스타일 사용 시 Phase 3.5 (Visual Accuracy Research) 필수 수행
+- INSTRUCTION 블록에 Visual Accuracy Reference 섹션 작성 필수
+- Application Context, Physical Objects, Scale Relationships, Physical Connections, Critical Accuracy Rules 포함
 ```
 
 **사진 사용 케이스:**
@@ -761,12 +793,12 @@ Style:
 - 물리적 제품/부품
 
 **스타일 선택 가이드:**
-| 개념 성격 | 권장 스타일 |
-|:---|:---|
-| 추상적 개념 | 아이콘/도형 |
-| 구조/아키텍처 | 3D 렌더링 |
-| 실물/현장/장비 | **사진(Photography)** |
-| 복합 (실물+프로세스) | 사진 + 아이콘 하이브리드 |
+| 개념 성격 | 권장 스타일 | Visual Accuracy |
+|:---|:---|:---|
+| 추상적 개념 | 아이콘/도형 | 선택 |
+| 구조/아키텍처 | 3D 렌더링 | 권장 |
+| 실물/현장/장비 | **사진(Photography)** | **필수** |
+| 복합 (실물+프로세스) | 사진 + 아이콘 하이브리드 | **필수** |
 
 ### 텍스트 규격
 
@@ -858,6 +890,12 @@ Style:
 - 과도한 장식 요소
 - 중국어(汉字), 일본어(仮名) 등 비한글 아시아 문자
 
+#### 실물 정확성 금지 (사진/실물 포함 시)
+
+- 물리적으로 불가능한 형상·결합
+- 어플리케이션 클래스와 맞지 않는 비율/형태
+- 기계적 연결 없이 공중에 떠 있는 구성품
+
 ### 품질 체크리스트
 
 프롬프트 완성 후 확인:
@@ -890,6 +928,16 @@ Style:
 #### 스타일 적합성 검증
 - [ ] 실물/현장 주제는 사진(Photography) 스타일 고려됨
 - [ ] 추상 주제는 3D/아이콘 스타일 사용
+
+#### 실물 정확성 검증 ★ (사진/실물 장비 포함 시 필수)
+- [ ] INSTRUCTION 블록에 Visual Accuracy Reference 섹션이 포함됨
+- [ ] Application Context가 구체적 제품군/클래스를 명시함
+- [ ] Physical Objects에 각 대상의 기하학적 형태, 재질, 크기, 색상이 기술됨
+- [ ] Scale Relationships에 대상 간 상대적 크기 비율이 정의됨
+- [ ] Physical Connections에 결합 방식과 방향이 명시됨
+- [ ] Critical Accuracy Rules에 물리적 제약 조건이 기술됨
+- [ ] FORBIDDEN 블록에 물리적 부정확 요소가 금지됨
+- [ ] 웹 검색으로 실물 참조 정보를 확인했음
 
 #### 최종 검증
 - [ ] 금지 요소 없음

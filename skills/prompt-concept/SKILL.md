@@ -117,6 +117,35 @@ skills: layout-types
 | 포지셔닝, 우선순위 | 전략맵 메타포 |
 | 선별, 축소 | 깔때기 메타포 |
 
+### Phase 3.5: 실물 정확성 조사 (Visual Accuracy Research)
+
+사진(Photography) 스타일 또는 실물 장비/시스템이 포함된 경우 **필수** 수행합니다.
+3D 렌더링에서 물리적 대상이 포함되는 경우에도 수행을 권장합니다.
+
+```
++-- Step 3.5-1. 어플리케이션 컨텍스트 조사
+|   +-- 대상 시스템/장비가 속한 구체적 어플리케이션 식별
+|   +-- 제품군, 산업 규모, 클래스 등 명시
+|   +-- 유사 레퍼런스 제품/모델 식별
+|
++-- Step 3.5-2. 물리적 대상체 상세 기술
+|   +-- 각 대상의 기하학적 형태 (원통형, 초승달형, 직육면체 등)
+|   +-- 재질/표면 질감 (알루미늄 주조, 연마 강철, 리브 보강 등)
+|   +-- 대략적 크기 (mm 단위)
+|   +-- 색상/마감 및 핵심 시각적 특징
+|   +-- ⚠️ 웹 검색으로 실물 참조 정보를 확인할 것
+|
++-- Step 3.5-3. 스케일 관계 정의
+|   +-- 대상 간 상대적 크기 비율
+|
++-- Step 3.5-4. 물리적 결합 방식 기술
+|   +-- 대상 간 결합 방식과 방향
+|
++-- Step 3.5-5. 물리적 정확성 규칙 정의
+    +-- 전문가가 보았을 때 절대 틀리면 안 되는 물리적 제약
+    +-- 물리적으로 불가능한 구성 방지 규칙
+```
+
 ### Phase 4: 프롬프트 작성
 
 아래 스타일 가이드 적용.
@@ -702,6 +731,10 @@ Style:
 - Professional editorial/documentary photography aesthetic
 - Sharp focus, natural lighting, realistic proportions
 - Text labels overlaid on semi-transparent panels for readability
+
+⚠️ 사진 스타일 사용 시 Phase 3.5 (Visual Accuracy Research) 필수 수행
+- INSTRUCTION 블록에 Visual Accuracy Reference 섹션 작성 필수
+- Application Context, Physical Objects, Scale Relationships, Physical Connections, Critical Accuracy Rules 포함
 ```
 
 **적합한 개념:**
@@ -711,12 +744,12 @@ Style:
 - 산업 시설/인프라
 
 **스타일 선택 가이드:**
-| 개념 성격 | 권장 스타일 |
-|:---|:---|
-| 추상적 개념 (알고리즘, 프로세스) | 아이콘/도형 |
-| 구조/아키텍처 | 3D 렌더링 |
-| 실물/현장/장비 | **사진(Photography)** |
-| 복합 (실물+프로세스) | 사진 + 아이콘 하이브리드 |
+| 개념 성격 | 권장 스타일 | Visual Accuracy |
+|:---|:---|:---|
+| 추상적 개념 (알고리즘, 프로세스) | 아이콘/도형 | 선택 |
+| 구조/아키텍처 | 3D 렌더링 | 권장 |
+| 실물/현장/장비 | **사진(Photography)** | **필수** |
+| 복합 (실물+프로세스) | 사진 + 아이콘 하이브리드 | **필수** |
 
 ### 조명 및 해상도
 
@@ -845,6 +878,9 @@ Forbidden Elements:
 - English text alongside or under Korean labels (render Korean only, e.g., "굴착기" not "굴착기 Excavator")
 - Bilingual labeling in the rendered image
 - Rendering "(hint: ...)" format text in the image
+- Physically impossible shapes or connections for real-world equipment (when photography/3D style with real objects)
+- Equipment proportions inconsistent with the specified application class
+- Floating components without visible mechanical linkage (when depicting real systems)
 ```
 
 ### 품질 체크리스트
@@ -863,6 +899,17 @@ Forbidden Elements:
 - [ ] 시각적 메타포 명확 (사진/3D/아이콘 적합성 확인)
 - [ ] 여백 충분히 확보
 - [ ] 테마 색상 일관성
+
+#### 실물 정확성 검증 ★ (사진/실물 장비 포함 시 필수)
+
+- [ ] INSTRUCTION 블록에 Visual Accuracy Reference 섹션이 포함됨
+- [ ] Application Context가 구체적 제품군/클래스를 명시함
+- [ ] Physical Objects에 각 대상의 기하학적 형태, 재질, 크기, 색상이 기술됨
+- [ ] Scale Relationships에 대상 간 상대적 크기 비율이 정의됨
+- [ ] Physical Connections에 결합 방식과 방향이 명시됨
+- [ ] Critical Accuracy Rules에 물리적 제약 조건이 기술됨
+- [ ] FORBIDDEN 블록에 물리적 부정확 요소가 금지됨
+- [ ] 웹 검색으로 실물 참조 정보를 확인했음
 
 #### 권장 검증 (Impact Test)
 

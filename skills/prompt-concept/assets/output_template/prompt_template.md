@@ -19,6 +19,28 @@ Domain Keywords Reference (for AI understanding only - DO NOT render in image):
 - [한글 키워드3] = [English translation]
 (AI uses this reference to understand Korean labels but must NOT render English in the image)
 
+Visual Accuracy Reference (AI rendering guidance - DO NOT render as text):
+[Photography 또는 실물 장비/시스템이 포함된 경우 필수 작성, 3D/아이콘 전용이면 생략 가능]
+
+Application Context:
+[대상 시스템/장비가 속한 구체적 어플리케이션 - 제품군, 산업 규모, 클래스 등]
+
+Physical Objects:
+- [대상1]: [기하학적 형태, 재질/표면 질감, 대략적 크기, 색상, 핵심 시각적 특징]
+- [대상2]: [동일 형식]
+- [대상3]: [동일 형식]
+(각 대상의 실물 외형을 영어로 상세 기술. 웹 검색으로 참조 정보를 확인할 것)
+
+Scale Relationships:
+- [대상 간 상대적 크기 비율 - "A는 B의 약 2배 크기" 형태]
+
+Physical Connections:
+- [대상 간 결합 방식 (볼트, 플랜지, 스플라인, 용접 등)과 방향]
+
+Critical Accuracy Rules:
+- [전문가가 보았을 때 절대 틀리면 안 되는 물리적 제약 - "X는 반드시 Y와 수직이어야 한다" 형태]
+- [물리적으로 불가능한 구성을 방지하기 위한 규칙]
+
 Style:
 [3D / 아이콘 / 사진 중 선택]
 
